@@ -39,8 +39,8 @@ function init() {
 	meshes.torusKnot = addTorusKnot()
 
 	//Change our positions
-	meshes.tetahedron.position.set(4, -2, 0)
-	meshes.torusKnot.position.set(-4, 2, 0)
+	meshes.tetahedron.position.set(4, 0, 0)
+	meshes.torusKnot.position.set(-4, 0, 0)
 
 	//HERE WE'LL ADD EACH OBJECT TO OUR SCENE AS WELL
 	scene.add(meshes.default)

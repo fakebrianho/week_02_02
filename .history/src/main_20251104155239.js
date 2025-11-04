@@ -2,8 +2,9 @@
 import * as THREE from 'three'
 //IMPORT OUR ADD DEFAULT MESHES FUNCTION FROM OUR EXTERNAL JS FILE
 import { addDefaultMeshes } from './addDefaultMeshes'
-import { addTorusKnot } from './addTorusKnot'
-import { addTetrahedron } from './addTetrahedron'
+import { addTorusMeshes } from './addTorusMeshes'
+import { addSphereMeshes } from './addTetrahedron'
+import { add } from 'three/tsl'
 
 //SET UP OUR ESSENTIALS SCENE, CAMERA, RENDERER
 const scene = new THREE.Scene()
@@ -35,17 +36,17 @@ function init() {
 
 	//WE WILL ADD ANY AND ALL 3D MESHES TO OUR GLOBAL MESHES OBJECT HERE
 	meshes.default = addDefaultMeshes()
-	meshes.tetahedron = addTetrahedron()
-	meshes.torusKnot = addTorusKnot()
+	meshes.sphere = addTetrahedron()
+	meshes.torus = addTorusKnot()
 
 	//Change our positions
-	meshes.tetahedron.position.set(4, -2, 0)
-	meshes.torusKnot.position.set(-4, 2, 0)
+	meshes.sphere.position.set(4, 0, 0)
+	meshes.torus.position.set(-4, 0, 0)
 
 	//HERE WE'LL ADD EACH OBJECT TO OUR SCENE AS WELL
 	scene.add(meshes.default)
-	scene.add(meshes.torusKnot)
-	scene.add(meshes.tetahedron)
+	scene.add(meshes.torus)
+	scene.add(meshes.sphere)
 
 	//START OUR ANIMATION LOOP
 	animate()

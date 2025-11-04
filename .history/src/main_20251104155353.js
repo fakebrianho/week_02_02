@@ -35,17 +35,17 @@ function init() {
 
 	//WE WILL ADD ANY AND ALL 3D MESHES TO OUR GLOBAL MESHES OBJECT HERE
 	meshes.default = addDefaultMeshes()
-	meshes.tetahedron = addTetrahedron()
-	meshes.torusKnot = addTorusKnot()
+	meshes.sphere = addTetrahedron()
+	meshes.torus = addTorusKnot()
 
 	//Change our positions
-	meshes.tetahedron.position.set(4, -2, 0)
-	meshes.torusKnot.position.set(-4, 2, 0)
+	meshes.sphere.position.set(4, 0, 0)
+	meshes.torus.position.set(-4, 0, 0)
 
 	//HERE WE'LL ADD EACH OBJECT TO OUR SCENE AS WELL
 	scene.add(meshes.default)
-	scene.add(meshes.torusKnot)
-	scene.add(meshes.tetahedron)
+	scene.add(meshes.torus)
+	scene.add(meshes.sphere)
 
 	//START OUR ANIMATION LOOP
 	animate()

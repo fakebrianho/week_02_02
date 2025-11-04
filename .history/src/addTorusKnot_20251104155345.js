@@ -1,0 +1,8 @@
+import * as THREE from 'three'
+
+export const addTorusKnot = () => {
+	const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16)
+	const material = new THREE.MeshBasicMaterial({ color: 0x0000ff })
+	const mesh = new THREE.Mesh(geometry, material)
+	return mesh
+}
